@@ -27,7 +27,7 @@ const TechStack = () => {
           {row.map((tech) => (
             <span
               key={tech}
-              className="px-4 py-1.5 rounded-full border border-gray-800 bg-gray-900/50 text-[10px] md:text-xs font-mono hover:border-[#eccb59]/50 transition-all hover:scale-110 hover:bg-red-500/5 whitespace-nowrap shadow-sm hover:shadow-red-500/20"
+              className="px-4 py-1.5 rounded-full border border-gray-800 bg-gray-900/50 text-[10px] md:text-xs font-mono hover:border-[#eccb59]/50 transition-all hover:scale-110 hover:bg-red-500/5 whitespace-nowrap shadow-sm hover:shadow-red-500/20 text-gray-300 drop-shadow-[0_0_10px_#eccb59]/30"
             >
               {tech}
             </span>

@@ -23,13 +23,6 @@ const Home = () => {
           experience.
         </p>
 
-        {/* <p className="text-gray-400 leading-relaxed max-w-lg text-lg">
-          My name is <span className="text-white">Hoàng Duy</span>, also known as <span className="text-[#eccb59]">Meo</span>. 
-          As an Information Technology graduate, I am currently preparing to embark on my journey toward a 
-          Master’s Degree. My goal is to secure a stable and challenging 
-          position where I can build a solid career foundation.
-        </p> */}
-
         <TechStack />
 
         {/* Action Buttons */}
@@ -41,7 +34,7 @@ const Home = () => {
               className="group-hover:translate-x-1 transition-transform text-[#eccb59]"
             />
           </button>
-          <button className="flex items-center gap-2 px-8 py-3  bg-gray-900 border border-gray-800 rounded-lg hover:border-[#eccb59]/50 transition">
+          <button className="flex items-center gap-2 px-8 py-3  bg-gray-900 border border-gray-800 rounded-lg hover:border-[#eccb59]/50 transition text-gray-300">
             Contact <Mail size={16} className="text-[#eccb59]" />
           </button>
         </div>
