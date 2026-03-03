@@ -9,7 +9,6 @@ import {
   Quote,
   ArrowUpRight,
 } from "lucide-react";
-import { motion } from "framer-motion";
 
 const About = () => {
   return (
