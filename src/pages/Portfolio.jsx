@@ -9,7 +9,7 @@ import {
   Layers,
 } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
-
+import { motion } from "framer-motion";
 // Import các con của nó từ folder Portfolio
 import ProjectsTab from "../components/Portfolio/ProjectsTab";
 import CertificatesTab from "../components/Portfolio/CertificatesTab";
@@ -18,15 +18,33 @@ import TechStackTab from "../components/Portfolio/TechStackTab";
 const Portfolio = () => {
   // Tab lớn: Projects, Certificates, Tech Stack
   const [activeMainTab, setActiveMainTab] = useState("Projects");
-  
+
   // Tab nhỏ (Chỉ dùng cho Projects): Project, Design, Editing
   const [activeSubTab, setActiveSubTab] = useState("Project");
 
   const categories = ["Project", "Design", "Editing"];
   const projects = [
-    { id: 1, title: "Website Perusahaan Prima Tekstil", category: "Project", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426" },
-    { id: 2, title: "Liburan Kita - Platform Pemesanan", category: "Project", image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=2070" },
-    { id: 3, title: "Kedai Kopi Kenangan Senja", category: "Project", image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070" },
+    {
+      id: 1,
+      title: "Website Perusahaan Prima Tekstil",
+      category: "Project",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426",
+    },
+    {
+      id: 2,
+      title: "Liburan Kita - Platform Pemesanan",
+      category: "Project",
+      image:
+        "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=2070",
+    },
+    {
+      id: 3,
+      title: "Kedai Kopi Kenangan Senja",
+      category: "Project",
+      image:
+        "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070",
+    },
   ];
 
   return (
@@ -39,20 +57,46 @@ const Portfolio = () => {
       className="w-full py-24 px-8 relative z-10"
     >
       <div className="container mx-auto space-y-16">
-        {/* 1. Header Section (GIỮ NGUYÊN) */}
         <div className="text-center space-y-6 max-w-3xl mx-auto">
           <div className="relative inline-block">
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter italic">
-              Portfolio <span className="text-[#eccb59] filter drop-shadow-[0_0_15px_rgba(236,203,89,0.5)]">Showcase</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter  italic">
+              Portfolio{" "}
+              <span className="text-[#eccb59] filter drop-shadow-[0_0_15px_rgba(236,203,89,0.5)]">
+                Showcase
+              </span>
             </h2>
+
             <div className="absolute -bottom-2 left-0 w-full h-[4px] bg-gradient-to-r from-transparent via-[#eccb59] to-transparent opacity-50"></div>
           </div>
+
           <div className="space-y-4">
-            <div className="flex items-center justify-center gap-3 tracking-tight">
+            <div className="flex items-center justify-center gap-3 filter drop-shadow-[0_0_70px_rgba(236,203,89,0.8)] tracking-tight">
+              <div className="h-[1px] w-12 bg-gray-800"></div>
+
               <Terminal size={18} className="text-[#eccb59] animate-pulse" />
-              <span className="text-[#eccb59] font-mono text-xs uppercase tracking-[0.3em]">Technical Expertise</span>
+
+              <span className="text-[#eccb59] font-mono text-xs uppercase tracking-[0.3em]">
+                Technical Expertise
+              </span>
+
               <Code2 size={18} className="text-[#eccb59] animate-pulse" />
+
+              <div className="h-[1px] w-12 bg-gray-800"></div>
             </div>
+
+            <p className="text-gray-400 text-m md:text-base leading-relaxed font-mono px-4">
+              Explore my journey through{" "}
+              <span className="text-white border-b border-gray-700">
+                projects
+              </span>
+              ,
+              <span className="text-white border-b border-gray-700">
+                {" "}
+                certifications
+              </span>
+              , and expertise. Each section represents a milestone in my
+              continuous learning path.
+            </p>
           </div>
         </div>
 
@@ -76,10 +120,14 @@ const Portfolio = () => {
                       : "text-gray-500 hover:text-gray-300 hover:bg-white/5"
                   }`}
                 >
-                  <div className={`p-2 rounded-xl transition-colors ${activeMainTab === tab.id ? "bg-red-500/20 text-red-500 shadow-[0_0_15px_rgba(239,68,68,0.2)]" : "bg-gray-800/50 text-gray-600 group-hover:text-gray-400"}`}>
+                  <div
+                    className={`p-2 rounded-xl transition-colors ${activeMainTab === tab.id ? "bg-red-500/20 text-red-500 shadow-[0_0_15px_rgba(239,68,68,0.2)]" : "bg-gray-800/50 text-gray-600 group-hover:text-gray-400"}`}
+                  >
                     {tab.icon}
                   </div>
-                  <span className="font-bold tracking-[0.3em] text-sm uppercase font-mono">{tab.id}</span>
+                  <span className="font-bold tracking-[0.3em] text-sm uppercase font-mono">
+                    {tab.id}
+                  </span>
                 </button>
               ))}
             </div>
@@ -98,11 +146,11 @@ const Portfolio = () => {
             >
               {/* Nếu chọn Projects: Hiện Sub-filter và Grid ảnh */}
               {activeMainTab === "Projects" && (
-                <ProjectsTab 
-                  activeTab={activeSubTab} 
-                  setActiveTab={setActiveSubTab} 
-                  categories={categories} 
-                  projects={projects} 
+                <ProjectsTab
+                  activeTab={activeSubTab}
+                  setActiveTab={setActiveSubTab}
+                  categories={categories}
+                  projects={projects}
                 />
               )}
 

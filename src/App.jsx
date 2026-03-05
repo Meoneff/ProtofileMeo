@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 import { motion } from "framer-motion";
 
 const App = () => {
@@ -60,6 +61,15 @@ const App = () => {
           className="min-h-screen flex items-center"
         >
           <Portfolio />
+        </motion.section>
+
+        <motion.section
+          id="contact"
+          onViewportEnter={() => setActiveSection("contact")}
+          viewport={{ amount: 0.5 }}
+          className="min-h-screen flex items-center"
+        >
+          <Contact />
         </motion.section>
       </div>
     </div>

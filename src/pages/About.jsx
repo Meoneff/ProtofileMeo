@@ -9,7 +9,7 @@ import {
   Quote,
   ArrowUpRight,
 } from "lucide-react";
-
+import { motion } from "framer-motion";
 const About = () => {
   return (
     <motion.section
@@ -71,8 +71,8 @@ const About = () => {
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                href="/HoangDuy_CV.pdf"
-                download="HoangDuy_CV.pdf"
+                href="/Ha_Hoang_Duy_CV.pdf"
+                download="Ha_Hoang_Duy_CV.pdf"
                 className="flex items-center gap-2 px-6 py-3 bg-[#eccb59] text-black font-bold rounded-lg hover:shadow-[0_0_20px_#eccb5940] transition-all active:scale-95 cursor-pointer"
               >
                 <Download size={18} /> Download CV

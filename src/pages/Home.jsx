@@ -9,7 +9,6 @@ const Home = () => {
     <main className="relative z-10 container mx-auto px-8 mt-8 flex flex-col lg:flex-row items-center gap-16">
       {/* Left Side: Info */}
       <div className="w-full lg:w-1/2 space-y-8">
-        {/* Lưu ý: Bạn cần vào file Hero.jsx để đổi màu chữ Developer thành #eccb59 luôn nhé */}
         <Hero />
 
         <p className="text-gray-400 leading-relaxed max-w-lg text-lg">
@@ -34,16 +33,42 @@ const Home = () => {
               className="group-hover:translate-x-1 transition-transform text-[#eccb59]"
             />
           </button>
-          <button className="flex items-center gap-2 px-8 py-3  bg-gray-900 border border-gray-800 rounded-lg hover:border-[#eccb59]/50 transition text-gray-300">
+          <a
+            href="#contact"
+            className="flex items-center gap-2 px-8 py-3 bg-gray-900 border border-gray-800 rounded-lg hover:border-[#eccb59]/50 transition text-gray-300"
+          >
             Contact <Mail size={16} className="text-[#eccb59]" />
-          </button>
+          </a>
         </div>
 
-        {/* Socials */}
+        {/* Socials - Đã nhét link chuẩn bài */}
         <div className="flex drop-shadow-[0_0_15px_#eccb59] gap-6 pt-6">
-          <Github className="text-gray-500 hover:text-[#eccb59] cursor-pointer transition-colors" />
-          <Linkedin className="text-gray-500 hover:text-[#eccb59] cursor-pointer transition-colors" />
-          <Instagram className="text-gray-500 hover:text-[#eccb59] cursor-pointer transition-colors" />
+          <a
+            href="https://github.com/Meoneff"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-[#eccb59] transition-colors"
+          >
+            <Github />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/hoangduymeo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-[#eccb59] transition-colors"
+          >
+            <Linkedin />
+          </a>
+
+          <a
+            href="https://www.instagram.com/meo.neff/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-[#eccb59] transition-colors"
+          >
+            <Instagram />
+          </a>
         </div>
       </div>
 
